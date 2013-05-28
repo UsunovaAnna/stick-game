@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body { background-color: rgb(182, 245, 152); }
 table#results th { width: 150px; text-align: left;}
 table#results td { border-bottom: 1px solid #CCCCCC; }
 table#results td.last { width: 100px; text-align: center; }
