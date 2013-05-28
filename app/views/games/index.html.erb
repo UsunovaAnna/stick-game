@@ -1,0 +1,29 @@
+<h1>Listing games</h1>
+
+<table id="results" cellspacing="0">
+  <tr>
+    <th class="id"></th>
+    <th>First player</th>
+    <th>Second player</th>
+    <th>Sticks</th>
+    <th>Winner</th>
+    <th>Date</th>
+    <th></th>
+  </tr>
+
+<% @games.each do |game| %>
+  <tr>
+    <td class="id"><%= game.id %></td>
+    <td><%= game.first_player %></td>
+    <td><%= game.second_player %></td>
+    <td><%= game.sticks %></td>
+    <td><%= game.winner %></td>
+    <td><%= game.created_at %></td>
+    <td class="last"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Game', new_game_path %>

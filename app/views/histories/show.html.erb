@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Game:</b>
+  <%= @history.game_id %>
+</p>
+
+<p>
+  <b>Player:</b>
+  <%= @history.player %>
+</p>
+
+<p>
+  <b>Sticks:</b>
+  <%= @history.sticks %>
+</p>
+
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

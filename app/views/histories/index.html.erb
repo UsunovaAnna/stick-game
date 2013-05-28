@@ -1,0 +1,29 @@
+<h1>Listing histories</h1>
+
+<table>
+  <tr>
+    <th>Game</th>
+    <th>Player</th>
+    <th>Sticks</th>
+    <th>Step</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @histories.each do |history| %>
+  <tr>
+    <td><%= history.game_id %></td>
+    <td><%= history.player %></td>
+    <td><%= history.sticks %></td>
+    <td><%= history.step %></td>
+    <td><%= link_to 'Show', history %></td>
+    <td><%= link_to 'Edit', edit_history_path(history) %></td>
+    <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New History', new_history_path %>

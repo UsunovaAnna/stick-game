@@ -1,0 +1,18 @@
+
+  <div class="field">
+    <%= label_tag :first_player %><br />
+    <%= text_field_tag 'first_player', "host" %>
+  </div>
+  <div class="field">
+    <%= label_tag :second_player %><br />
+    <%= text_field_tag 'second_player', "browser" %>
+  </div>
+  <div class="field">
+    <%= label_tag :sticks %><br />
+    <%= text_field_tag 'sticks', 0 %>
+  </div>
+  <div class="actions">
+    <%= button_tag "Start Game", :id => 'starter' %>
+    <%= button_tag "Switch Players", :id => 'switcher' %>
+  </div>
+

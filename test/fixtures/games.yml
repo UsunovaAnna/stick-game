@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_player: MyString
+  second_player: MyString
+  winner: MyString
+  created_at: 2013-05-19 15:40:47
+
+two:
+  first_player: MyString
+  second_player: MyString
+  winner: MyString
+  created_at: 2013-05-19 15:40:47
