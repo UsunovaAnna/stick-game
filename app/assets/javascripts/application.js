@@ -36,13 +36,14 @@ $(document).ready(function() {
 		}).done(function( result ) {
 			
 		   gameId = result.id;
-		   sticks = result.sticks; /* кол-во палочек на начало игры */
+		   sticks = result.sticks; 
 		   var step = 0;
 
 		   $('#history').html('');
 		   $('#history').append('<p>Первый игрок: <strong>'+ $('#first_player').val() +'</strong></p>');
 		   $('#history').append('<p></strong> Второй игрок <strong>'+ $('#second_player').val() +'</strong></p>');
 		   $('#history').append('<p>Палочек в игре: <strong>'+ sticks +'</strong></p>');
+		   $('#history').append('<table id="game_logs" border="1" cellspacing="0"></table>');
 		   if ( $('#first_player').val() == 'browser' )
 		   {
 		   		step = getRandomSticks(1,3);
@@ -62,7 +63,7 @@ function getRandomSticks(min, max)
 
 function show(step)
 {
-	$('#history').append('<p><strong>'+ step.player +'</strong> Взял: ' + step.step + ' Осталось: ' + step.sticks + '</p>');
+	$('#game_logs').append('<tr><td><strong>'+ step.player +'</strong> Взял: </td><td> ' + step.step + '</td> <td>Осталось: </td><td>' + step.sticks + '</td></tr>');
 }
 
 function stepup(step)
